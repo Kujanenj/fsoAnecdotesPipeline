@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import {
   displayNotificaton,
@@ -8,9 +8,6 @@ import {
 import {useField} from './hooks/useField'
 const CreateNew = (props) => {
     const history = useHistory()
-   // const [content, setContent] = useState('')
-   // const [author, setAuthor] = useState('')
-   // const [info, setInfo] = useState('')
   const {reset: resetContent, ...content} = useField('text') 
   const {reset: resetAuthor, ...author} = useField('text') 
   const {reset: resetInfo, ...info} = useField('text') 
