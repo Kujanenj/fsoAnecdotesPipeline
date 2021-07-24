@@ -11,7 +11,7 @@ import Anecdote from "./Anecdote";
 import About from "./About";
 import Notification from './Notification'
 
-const Menu = ({ anecdotes, addNew }) => {
+const Menu = ({ anecdotes, addNew, vote}) => {
   const padding = {
     padding: 5,
   };
@@ -32,7 +32,7 @@ const Menu = ({ anecdotes, addNew }) => {
           <CreateNew addNew={addNew} />
         </Route>
         <Route path="/anecdotes/:id">
-          <Anecdote anecdotes={anecdotes}></Anecdote>
+          <Anecdote anecdotes={anecdotes} vote={vote}></Anecdote>
         </Route>
         <Route path="/">
           <Notification></Notification>

@@ -27,6 +27,18 @@ const App = () => {
     }
   ])
 
+   const anecdoteById = (id) =>
+   anecdotes.find(a => a.id === id)
+
+  const vote = (id) => {
+    const anecdote = anecdoteById(id)
+
+    const voted = {
+     ...anecdote,
+     votes: anecdote.votes + 1    }
+
+  setAnecdotes(anecdotes.map(a => a.id === id ? voted : a))
+  }
 
  const addNew = (anecdote) => {
     anecdote.id = (Math.random() * 10000).toFixed(0)
@@ -37,7 +49,7 @@ const App = () => {
   return (
     <div>
     
- <Menu anecdotes = {anecdotes} addNew = {addNew} />
+ <Menu anecdotes = {anecdotes} addNew = {addNew} vote={vote}/>
   <Notification></Notification>  
       <h1>Software anecdotes</h1>
    
