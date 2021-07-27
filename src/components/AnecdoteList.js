@@ -3,7 +3,7 @@ import {
   Link
 } from "react-router-dom"
 import React from 'react'
-const AnecdoteList = ({ anecdotes }) => (
+const AnecdoteList = ({ anecdotes}) => (
   <div>
     <h2>Anecdotes</h2>
     <ul>
